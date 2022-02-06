@@ -11,9 +11,7 @@ export class CoreClient {
         })
     }
 
-    get(url: string) {
-        return this.axios.get(url)
-        .then(response => response)
-        .catch(error => error);
+    async get(url: string) {
+        return await this.axios.get(url)
     }
 }
